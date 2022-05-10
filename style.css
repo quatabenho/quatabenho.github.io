@@ -23,7 +23,13 @@ nav{
 }
 .logo{
     max-height: 100px;
+    box-shadow: 0 0 5px #f87272;
+    border-radius: 20px;
 }
+
+
+
+
 nav ul li{
     list-style: none;
     display: inline-block;
@@ -93,8 +99,13 @@ nav ul li a:hover:after{
     text-transform: inherit;
     width: 70%;
 }
+
 .content h1 span{
     color: #fd4766;
+}
+
+.content h1 span:hover{
+    color: #fc5873;
 }
 .content p{
     width: 55%;
