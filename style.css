@@ -8,11 +8,13 @@
 }
 
 .img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
+
+
 a{
     text-decoration: none;
 }
@@ -22,14 +24,12 @@ a{
     background: url(img/bg1.jpg);
     background-size: cover;
 }
-
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 30px 100px;
 }
-
 .logo{
     max-height: 100px;
     box-shadow: 0 0 5px #f87272;
@@ -117,11 +117,53 @@ nav ul li a:hover:after{
 }
 
 .content h1 span:hover{
-    color: #fc5873;
+    color: #f85d76;
 }
 .content p{
     width: 55%;
     color: #757575;
     margin-top: 25px;
     margin-bottom: 30px;
+}
+
+.bt{
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 16px 40px;
+    border-radius: 500px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+    background-size: 152% 100%;
+    background: #000000;
+    border: 2px solid #000000;
+}
+
+.bt:hover{
+    background: transparent;
+    border-color: #000000;
+    color: #000000;
+}
+
+.btnt{
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 6px 10px;
+    border-radius: 500px;
+    display: inline-block;
+    font-weight: 100;
+    transition: all .4s ease-in-out;
+    background-size: 152% 100%;
+    background: #ffffff;
+    border: 2px solid #000000;
+}
+
+.btnt:hover{
+    background: transparent;
+    border-color: #000000;
+    color: #000000;
 }
