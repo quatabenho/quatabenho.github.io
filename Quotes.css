@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bangers&display=swap');
+
+
+
+
+
 body {
   color: #1a1a1a;
   font-family: "Open Sans", Helvetica, sans-serif;
@@ -9,6 +15,13 @@ body {
   background: #757f9a;
   background: -webkit-linear-gradient(to left, #d7dde8, #757f9a);
   background: linear-gradient(to left, #d7dde8, #757f9a);
+}
+
+.box{
+  border: 3px solid #fcfcfc;
+  border-radius: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
 }
 
 .sign {
@@ -98,7 +111,7 @@ blockquote {
   font-style: italic;
   color: #000000;
   padding: 1.2em 30px 1.2em 75px;
-  border-left: 8px solid #c0bdec;
+  border-left: 8px solid #dfcbc0;
   line-height: 1.6;
   position: relative;
   background: #d9f5ed;
@@ -112,36 +125,30 @@ blockquote:hover {
   font-style: italic;
   color: #000000;
   padding: 1.2em 30px 1.2em 75px;
-  border-left: 8px solid #78c0a8;
+  border-left: 8px solid #000000;
   line-height: 1.6;
   position: relative;
   background: #ffffff;
-}
-
-blockquote::before {
-  font-family: Arial;
-  content: "\201C";
-  color: #ffffff;
-  font-size: 4em;
-  position: absolute;
-  left: 10px;
-  top: -10px;
-}
-
-blockquote::after {
-  content: "";
 }
 
 .question {
   text-align: center;
   font-size: 2.4em;
   width: 60%;
-  margin: 50px auto;
-  font-family: 'Bangers', cursive;
+  margin: 30px auto;
+  font-family: 'Amatic SC', cursive;
   font-style: italic;
-  color: #ffffff;
-  border: 10px solid #ffffff;
-  border-radius: 50px;
-  line-height: 1.6;
+  font-weight: bold;
+  border: 3px solid #ffffff;
+  border-radius: 20px;
+  line-height: 2;
   position: relative;
+  color: #000000;
+  outline-color: #ffffff;
 }
+
+.source{
+  text-align: right;
+  margin:auto 10px 10px;
+}
+
