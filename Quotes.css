@@ -12,7 +12,7 @@ body {
   font-size: 15px;
   line-height: 1.6em;
   text-align: center;
-  background: #c9cfe2;
+  /* background: #ffffff; */
   /* background: -webkit-linear-gradient(to left, #d7dde8, #757f9a); */
   /* background: linear-gradient(to left, #d7dde8, #757f9a); */
 }
@@ -36,9 +36,9 @@ body {
   text-align: center;
   border-radius: 20px;
   margin-top: auto;
-  border: 2px solid rgb(255, 255, 255);
-  width: 280px;
-  height: 280px;
+  border: 2px solid rgb(0, 0, 0);
+  width: 290px;
+  height: 290px;
 }
 
 .centered {
@@ -105,10 +105,10 @@ blockquote {
   font-style: italic;
   color: #000000;
   padding: 1.2em 30px 1.2em 75px;
-  border-left: 8px solid #ffffff;
+  border-left: 8px solid #2364AA;
   line-height: 1.6;
   position: relative;
-  background: #d9f5ed;
+  background: #b2e6d4;
   font-weight: bold;
 
   /* text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255); */
@@ -122,10 +122,10 @@ blockquote:hover {
   font-style: italic;
   color: #000000;
   padding: 1.2em 30px 1.2em 75px;
-  border-left: 8px solid #000000;
+  border-left: 8px solid #995FA3;
   line-height: 1.6;
   position: relative;
-  background: #ffffff;
+  background: #83e8ba;
 }
 
 .question {
@@ -146,9 +146,9 @@ blockquote:hover {
 }
 
 .box{
-  border: 3px solid #b8b3b3;
-  background-image: linear-gradient(to right bottom, #8d9bc2, #bbcc7d);
-  border-radius: 20px;
+  /* border: 3px solid #b8b3b3; */
+  /* background-image: linear-gradient(to right bottom, #8d9bc2, #bbcc7d);
+  border-radius: 20px; */
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
@@ -243,10 +243,10 @@ ul li a:hover span:nth-child(4) {
 }
 
 .facebook:hover {
-  color: #3b5998;
+  color: #000000;
 }
 .facebook:hover span { 
-  background: #3b5998;
+  background: #000000;
 }
 .twitter:hover {
   color: #1da1f2;
@@ -255,10 +255,10 @@ ul li a:hover span:nth-child(4) {
   background: #1da1f2;
 }
 .instagram:hover {
-  color: #f07cd3;
+  color: #000000;
 }
 .instagram:hover span { 
-  background: #f88dd8;
+  background: #000000;
 }
 .google:hover {
   color: #dd4b39;
