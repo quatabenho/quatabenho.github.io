@@ -107,6 +107,6 @@ a.nav-item:hover {
 
 }
 
-/* .social-icon{
-	width: 50px;
-} */
+.social-icon:hover{
+	border: solid 5px #0e282e;
+}
