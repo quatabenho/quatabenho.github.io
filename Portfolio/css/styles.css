@@ -72,6 +72,10 @@ a.nav-item:hover {
 	border: 2px solid rgba(7, 59, 79, 0.5);
 }
 
+.box:hover{
+	border: 2px solid #fff;
+}
+
 .title {
 	color: #fff;
 	text-align: left;
