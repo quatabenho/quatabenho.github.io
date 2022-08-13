@@ -1,50 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link type="image/png" sizes="16x16" rel="icon" href="img/favicon.png">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-    <title>Texto To Voice</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Text to Speech</title>
 </head>
+
 <body>
     <div id="content">
+
         <div id="welcome" class="item">
+
             <div class="circle">
+
                 <ion-icon name="power-outline"></ion-icon>
             </div>
-            <a href="https://quatabenho.github.io/" target="_blank">
-            <div class="author">
-                
-             <span>Q</span>
-             <span>u</span>
-             <span>a</span>
-             <span>T</span>
-             <span>a</span>
-             <span>B</span>
-             <span>e</span>
-             <span>N</span>
-             <span>h</span>
-             <span>o</span>
-            
-            </div></a>
-        </div>
-        <div id="start" class="item">
-            <div class="back">
-                <ion-icon name="arrow-back-circle-outline">hello</ion-icon>
-                
-            </div>
-            
-           
 
-            
-           
+            <a href="https://quatabenho.github.io/" target="_blank">
+                <div class="author">
+
+                    <span>Q</span>
+                    <span>u</span>
+                    <span>a</span>
+                    <span>T</span>
+                    <span>a</span>
+                    <span>B</span>
+                    <span>e</span>
+                    <span>N</span>
+                    <span>h</span>
+                    <span>o</span>
+
+                </div>
+            </a>
+
+        </div>
+
+        <div id="start" class="item">
+
+            <div class="back">
+                <ion-icon name="arrow-back-circle-outline"></ion-icon>
+
+            </div>
+
             <textarea name="input" id="input"></textarea>
+            <br>
+            <div class="selection">
+                <select name="" id="input" class="form-control" required="required">
+                    <option value="" disabled>Amharic</option>
+                    <option value="" disabled>Arabic</option>
+                    <option value="" selected>English </option>
+                    <option value="" disabled>Danish</option>
+                    <option value="" disabled>Filipino</option>
+                    <option value="" disabled>French</option>
+                    <option value="" disabled>German</option>
+                    <option value="" disabled>Indonesian</option>
+                    <option value="" disabled>Italian</option>
+                    <option value="" disabled>Japanese</option>
+                    <option value="" disabled>Korean</option>
+                    <option value="" disabled>Malay</option>
+                    <option value="" disabled>Russian</option>
+                    <option value="" disabled>Chinese </option>
+                    <option value="" disabled>Spanish</option>
+                    <option value="" disabled>Thai</option>
+                    <option value="" disabled>Chinese </option>
+                    <option value="" disabled>Vietnamese</option>
+                    <select>
+            </div>
             <button class="get-voice">Convert</button>
+
         </div>
     </div>
 
@@ -52,4 +82,5 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script/main.js"></script>
 </body>
+
 </html>
