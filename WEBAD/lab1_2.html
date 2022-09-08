@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Danh sách sinh viên</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+
+        function showData(data){
+            let tbsv = $('#tbsv')
+            for(let i=0; i<data.length;i++){
+                let item = data[i]
+                let tr = `<tr>
+                    <td>${item.id}</td>
+                    <td>${item.name}</td>
+                    <td>${item.age}</td>
+                    </tr>`
+                    tbsv.append(tr)
+            }
+        }
+
+        function getDataAjax(){
+            let url = 'https://maivanmanh.github.io/503106/lab01/students.json'
+            let req = new XMLHttpRequest()
+            req.onload = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    let json = JSON.parse(this.response)
+                    showData(json.data)
+                }
+            }
+            req.open('GET', url)
+            req.send()
+        }
+
+
+        function getDataFetch(){
+            let url = 'https://maivanmanh.github.io/503106/lab01/students.json'
+            fetch(url).then(response =>{
+                return response.json()
+            }).then(json =>{
+                showData(json.data)
+            })
+        }
+
+    </script>
+</head>
+<body>
+
+<div class="container my-3">
+    <h4 class="my-5 text-primary text-center text-uppercase">Danh sách sinh viên </h4>
+
+    <button type="button" class="btn btn-danger" onclick="getDataFetch()">Tải bằng Fetch API</button>
+    <button type="button" class="btn btn-warning" onclick="getDataAjax">Tải bằng Ajax</button><br>
+    <i>Chọn 1 trong 2 button để lấy danh sách sinh viên</i>
+<br><br>
+    
+    <table class="table table-striped border">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            
+        </tr>
+        </thead>
+        <tbody id="tbsv">
+         
+        </tbody>
+    </table>
+</div>
+
+
+
+</body>
+</html>

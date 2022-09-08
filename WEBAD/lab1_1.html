@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Tải ảnh động</title>
+    <script>
+
+        function showImgAjax(){
+            let url = document.getElementById('url').value;
+            if(url ===''){
+                alert("Chưa nhập URL")
+                return
+            }
+            let req = new XMLHttpRequest()
+            req.responseType = 'blob'
+            req.onload = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    let img = document.getElementById('img')
+                    let urlbase64 = URL.createObjectURL(this.response)
+                    img.src = urlbase64
+                }
+            }
+            req.open('GET',url)
+            req.send()
+        }
+    
+
+        function showImgFetch(){
+            let url = document.getElementById('url').value;
+            if(url ===''){
+                alert('Chưa nhập URL')
+                return
+            }
+            fetch(url).then(response => {
+                res= response.clone()
+                return res.blob()
+            }).then(blob=>{
+                let img = document.getElementById('img')
+                let urlbase64 = URL.createObjectURL(blob)
+                img.src = urlbase64
+            })
+            
+        }
+    </script>
+
+</head>
+
+<body>
+    <br>
+    <div style="text-align:center">
+        <h1>Bài tập tải ảnh động bằng Ajax </h1><br>
+    
+        <input type="url" id="url" class="form-control" value="" placeholder="Nhập URL" >
+        
+        <button type="button" class="btn btn-large btn-block btn-success" value="Tải ảnh" onclick="showImgAjax()" >Tải ảnh</button>
+        
+        <br>
+        <img class="img-responsive" id="img">
+    
+    </div>
+   
+</body>
+
+</html>
