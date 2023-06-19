@@ -51,6 +51,7 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a.active {
     color: #fd4766;
+    cursor: pointer;
 }
 
 nav ul li a:after {
@@ -120,6 +121,7 @@ nav ul li a.active:after {
 .content h1 span:hover{
     color: #f37d91;
 }
+
 .content p{
     width: 55%;
     color: #757575;
