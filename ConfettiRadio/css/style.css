@@ -127,15 +127,3 @@ nav ul li a.active:after {
     margin-bottom: 30px;
 }
 
-.tab-content {
-    display: none;
-  }
-  
-.tab-content.active {
-    display: block;
-}
-
-.tab-link-actived{
-    color: #fd4766;
-
-}
