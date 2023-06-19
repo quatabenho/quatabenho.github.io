@@ -15,22 +15,58 @@
         <nav>
             <a href ="https://www.youtube.com/channel/UCTnmA4L4ZldTHuYpaLGxiZA" target="_blank"><img src="img\avatar.png" class="logo"></a>
             <ul>
-                <li><a href="https://www.youtube.com/channel/UCTnmA4L4ZldTHuYpaLGxiZA/videos" target="_blank">Videos</a></li>
-                <li><a href="https://www.youtube.com/channel/UCTnmA4L4ZldTHuYpaLGxiZA/playlists" target="_blank">Playlists</a></li>
+                <!-- <li><a href="https://www.youtube.com/channel/UCTnmA4L4ZldTHuYpaLGxiZA/videos" target="_blank">Videos</a></li>
+                <li><a href="https://www.youtube.com/channel/UCTnmA4L4ZldTHuYpaLGxiZA/playlists" target="_blank">Playlists</a></li> -->
+                <li><a href="#home" class="tab-link active" data-tab="home" >Home</a></li>
+                <li><a href="#videos" class="tab-link" data-tab="videos">Videos</a></li>
+                <li><a href="playlist" class="tab-link" data-tab="playlist">Playlists</a></li>
             </ul>
             <a href="https://quatabenho.github.io/" class="btn" target="_blank">contact</a>
         </nav>
 
-        <div class="content">
+        <div id="home" class="content tab-content active">
             <span class="title">âm nhạc không chỉ để nghe</span><br>
             <span class="title">âm nhạc còn là music</span>
             <a href ="https://www.youtube.com/channel/UCTnmA4L4ZldTHuYpaLGxiZA" target="_blank">
             <h1>Confetti <span>Radio</span></h1></a>
             <p>Điều chỉnh lại cảm xúc của bản thân, quên đi những chuyện không vui đã qua, nghe một vài bản nhạc, nhìn những phong cảnh trước mắt, nói những lời có thể nói, làm những chuyện có thể làm, đi con đường có thể đi, gặp những người đang muốn gặp.</p>
+            
+
             <a href="https://www.youtube.com/channel/UCTnmA4L4ZldTHuYpaLGxiZA/" class="btn" target="_blank"><i class="fa fa-youtube-play" style="font-size:auto;" ></i></a>    
             <a href="https://www.instagram.com/confetti.rad/" class="btn" target="_blank"><i class="fa fa-instagram" style="font-size:auto;" ></i></a>  
         </div>
-    </div>
 
+        <div id="videos" class="content tab-content" style="display: none;">
+            <!-- Videos content goes here -->
+        </div>
+
+        <div id="playlists" class="content tab-content" style="display: none;">
+            <!-- Playlists content goes here -->
+        </div>
+    </div>
+    <script>
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        function switchTab(event) {
+            event.preventDefault();
+            const tabId = this.getAttribute('data-tab');
+
+            tabLinks.forEach(function (link) {
+                link.classList.remove('active');
+            });
+
+            tabContents.forEach(function (content) {
+                content.style.display = 'none';
+            });
+
+            this.classList.add('active');
+            document.getElementById(tabId).style.display = 'block';
+        }
+
+        tabLinks.forEach(function (link) {
+            link.addEventListener('click', switchTab);
+        });
+    </script>
 </body>
 </html> 
